@@ -17,7 +17,21 @@ res.json(docs);
 });
 	
 app.post('/contactlist',function (req, res){
+console.log("request body = ");
 console.log(req.body);
+
+/*
+$.ajax( { url: "https://api.mlab.com/api/1/databases/cloudiaas/collections/users?apiKey=xNKgGTUVG9cgVj-Bjw4dFC8GZ7ppdWI3",
+		  data: JSON.stringify(req.body),
+		  type: "POST",
+		  contentType: "application/json",
+			success: function(data){
+				res.json(data);
+			},
+			error: function(xhr, status, err){
+				console.log(err);
+			}		});
+*/
 db.contactlist.insert(req.body, function(err, doc){
 res.json(doc);
 })
