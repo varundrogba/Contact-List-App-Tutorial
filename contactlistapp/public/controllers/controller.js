@@ -49,5 +49,4 @@ $scope.deselect = function() {
 $scope.contact = "";
 }	
 	
-//scope.contactlist = contactlist;
 	}]);
